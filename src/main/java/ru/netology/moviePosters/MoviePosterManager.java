@@ -39,7 +39,7 @@ public class MoviePosterManager {
             resultLenght = limitManager;
         }
         MoviePoster[] result = new MoviePoster[resultLenght];
-        for (int i = 0; i < resultLenght; i++) {
+        for (int i = 0; i < result.length; i++) {
             result[i] = movies[movies.length - 1 - i];
         }
         return result;
