@@ -2,6 +2,7 @@ package ru.netology.moviePosters;
 
 public class MoviePosterManager {
     private int limitManager = 5;
+    private MoviePoster[] movies = new MoviePoster[0];
 
     public MoviePosterManager() {
     }
@@ -15,7 +16,7 @@ public class MoviePosterManager {
     }
 
 
-    public MoviePoster[] movies = new MoviePoster[0];
+
 
     public void addNewMovie(MoviePoster movie) {
         MoviePoster[] tmp = new MoviePoster[movies.length + 1];
@@ -33,7 +34,8 @@ public class MoviePosterManager {
 
     public MoviePoster[] findLast() {
         int resultLenght;
-        if (limitManager == movies.length) {
+        if (limitManager > movies.length)
+        {
             resultLenght = movies.length;
         } else {
             resultLenght = limitManager;
